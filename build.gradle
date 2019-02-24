@@ -1,0 +1,29 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.21'
+}
+
+group 'com.perfect'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    compile "org.telegram:telegrambots:4.1.2"
+    compile "org.telegram:telegrambots-meta:4.1.2"
+    compile "org.telegram:telegrambots-abilities:4.1.2"
+    compile "org.telegram:telegrambotsextensions:4.1.2"
+
+    compile group: 'com.googlecode.libphonenumber', name: 'libphonenumber', version: '8.10.6'
+
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
